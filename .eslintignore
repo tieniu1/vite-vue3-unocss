@@ -1,0 +1,3 @@
+# .eslintignore
+# 禁用json校验,eslint通常用来校验JavaScript
+package.json

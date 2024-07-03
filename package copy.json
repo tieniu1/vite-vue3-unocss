@@ -1,0 +1,36 @@
+{
+  "name": "school-admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build-only": "vite build",
+    "build": "npm run build-prod && npm run build-staging",
+    "build-prod": "run-p type-check \"build-only {@}\" --",
+    "build-staging": "run-p type-check \"build-only {@} -- --mode staging\" --",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.5.3",
+    "normalize.css": "^8.0.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.15",
+    "vue-i18n": "^9.9.1",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "prettier": "^3.0.3",
+    "vite": "^5.0.11"
+  }
+}
